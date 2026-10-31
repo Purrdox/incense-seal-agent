@@ -1,0 +1,23 @@
+{
+  "searching": "（正在查询，请稍等。）",
+  "rate_limited": "（请求较多，请稍后再试。）",
+  "process_error": "（处理时出了点问题，请稍后再试。）",
+  "network_fail": "（网络连接不稳定，请稍后再试。）",
+  "search_fail": "（查询暂时失败，请稍后再试。）",
+  "empty_output": "（没有收到有效回复，请再说一遍。）",
+  "tool_loop_limit": "（操作步骤过多，已停止。）",
+  "backend_unready": "（模型服务未配置或不可用。）",
+  "no_skill": "（暂无可用的处理方式。）",
+  "compact_hint": "（当前对话已有 {n} 轮，建议发送 .compact 压缩。）",
+  "startup_notice": "（服务已启动。）",
+  "shutdown_notice": "（服务已关闭，关闭期间的提醒不会送达。）",
+  "unbound_guide": "（当前设备尚未绑定。发送 .create <uid> 创建身份，或 .link <uid> 绑定已有身份。）",
+  "probe_test": "（绑定测试：收到本条说明该设备可达。请回复 .link ok 完成验证。）",
+  "compact_done": "（压缩完成：{before} 轮对话已整理为 {facts} 条长期记忆。）",
+  "compact_none": "（当前没有可压缩的对话。）",
+  "compact_fail": "（压缩失败，原对话已保留，请稍后再试。）",
+  "backlog_skipped": "（有 {n} 条超过 {hours:g} 小时的过期提醒已跳过。）",
+  "delivery_failed": "（有一条提醒多次发送失败，已跳过：{content}）",
+  "data_corrupt": "（数据文件损坏：{files}。已备份并按空数据继续，请手动恢复。）",
+  "reminder_label": "【{title}】"
+}

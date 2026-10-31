@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "behavior": {
+    "proactive_per_min": 0.0045,
+    "proactive_daily_cap": 8,
+    "proactive_min_interval": 45,
+    "dialogue_turn_hard": 300,
+    "compact_hint_turns": 100,
+    "replay_window_hours": 24,
+    "message_merge_seconds": 3,
+    "message_split_chars": 400,
+    "message_send_gap": 0.8,
+    "chat_max_tokens": 8192,
+    "budget_minute_cap": 600000,
+    "budget_session_cap": 20000000,
+    "search_retries": 2,
+    "search_timeout": 8,
+    "search_backend": "auto",
+    "search_proxy": "http://127.0.0.1:7897",
+    "tts_enabled": true,
+    "tts_backend": "subprocess",
+    "tts_service_url": "",
+    "tts_voice": "calm",
+    "tts_device": "cuda",
+    "tts_timeout": 180
+  },
+  "model": {
+    "efforts": {
+      "chat": "xhigh",
+      "summarize": "low",
+      "extract": "low",
+      "evolve": "low",
+      "search": "minimal"
+    }
+  }
+}

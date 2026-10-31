@@ -1,0 +1,43 @@
+# 私有（永不提交）
+.env
+data/
+logs/
+*.log
+*.safetensors
+*.gguf
+
+# 运行/临时
+__pycache__/
+*.pyc
+tts/output/
+# 根目录 tts/：F5-TTS 工作区（ckpts 5GB+ / 参考音频库 / 推理输出），永不提交
+# 锚定 /tts/ 只忽略仓库根，不影响 src/qqlife/tts/ 代码
+/tts/
+napcat-data/
+eula.confirmed
+privacy.confirmed
+.runtime/
+# Internal documents and personal assets
+/开发文档/
+/REPORT.md
+/角色卡/
+/debug/
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite*
+*.db
+
+# Local environments, caches and build output
+.venv/
+venv/
+.pytest_cache/
+.pytest-*/
+*.egg-info/
+build/
+dist/
+.agents/
+.codex/

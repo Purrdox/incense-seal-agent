@@ -1,0 +1,44 @@
+[project]
+name = "qqlife-agent"
+version = "0.1.0"
+description = "QQ 生活助理 Agent：事务管理 + 主动提醒 + 情绪价值（个人自用，通用 CLI 层）"
+requires-python = ">=3.10"
+dependencies = [
+    "websockets>=12.0",
+    "httpx>=0.27",
+    "pydantic>=2.6",
+    "python-dotenv>=1.0",
+    "ddgs>=9.0",
+]
+
+[project.optional-dependencies]
+# 飞书通道：pip install -e ".[feishu]"（缺失时 onebot/CLI 模式不受影响）
+feishu = [
+    "lark-oapi>=1.7.5",
+    "av>=12.0",
+]
+# 测试：pip install -e ".[dev]"，然后 python -m pytest
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+qqlife = "qqlife.app:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# 标准 src-layout：src/ 下单一可导入包 qqlife
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["qqlife", "qqlife.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
